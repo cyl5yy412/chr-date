@@ -5,7 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created By Chr on 2019/5/24.
+ * java8之前
+ * <p>
+ * Created By Chr.yl on 2019/5/24.
  */
 public class TestDate {
     public static void main(String args[]) throws ParseException {
