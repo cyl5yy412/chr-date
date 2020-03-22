@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * 基于java8封装的时间处理工具类
+ * 基于java8封装的时间处理工具类:This class is immutable and thread-safe.
  * <p>
  * Created by Chr.yl on 2020/3/22.
  *
