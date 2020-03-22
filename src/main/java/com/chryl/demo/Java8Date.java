@@ -1,5 +1,7 @@
 package com.chryl.demo;
 
+import com.chryl.util.Date8Util;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -28,46 +30,46 @@ public class Java8Date {
 
         //获取当前日期,2018-08-21
         LocalDate localDate = LocalDate.now();
-        System.err.println("当前日期>" + localDate);
+        System.out.println("当前日期>" + localDate);
 
         //获取当前年 2018
-        System.err.println(localDate + "当前年>" + localDate.getYear());
+        System.out.println(localDate + "当前年>" + localDate.getYear());
 
         //获取当前月 8
-        System.err.println(localDate + "当前月>" + localDate.getMonthValue());
+        System.out.println(localDate + "当前月>" + localDate.getMonthValue());
 
         //获取当前年中的日 233
-        System.err.println(localDate + "当前年中的日>" + localDate.getDayOfYear());
+        System.out.println(localDate + "当前年中的日>" + localDate.getDayOfYear());
 
         //获取当前月中的日 21
-        System.err.println(localDate + "当前月中的日>" + localDate.getDayOfMonth());
+        System.out.println(localDate + "当前月中的日>" + localDate.getDayOfMonth());
 
         //获取当前星期中的日 2
-        System.err.println(localDate + "当前星期中的日>" + localDate.getDayOfWeek().getValue());
+        System.out.println(localDate + "当前星期中的日>" + localDate.getDayOfWeek().getValue());
 
         //当前日期前一天,2018-08-20 minus:（表示运算）减去
-        System.err.println(localDate + "前一天>" + localDate.minusDays(1));
+        System.out.println(localDate + "前一天>" + localDate.minusDays(1));
 
         //当前日期后一天,2018-08-20 plus:（表示运算）加
-        System.err.println(localDate + "后一天>" + localDate.plusDays(1));
+        System.out.println(localDate + "后一天>" + localDate.plusDays(1));
 
         //当前日期前一月,2018-07-21 minus:（表示运算）减去
-        System.err.println(localDate + "前一月>" + localDate.minusMonths(1));
+        System.out.println(localDate + "前一月>" + localDate.minusMonths(1));
 
         //当前日期后一月,2018-09-21 plus:（表示运算）加
-        System.err.println(localDate + "后一月>" + localDate.plusMonths(1));
+        System.out.println(localDate + "后一月>" + localDate.plusMonths(1));
 
         //当前日期前一年,2017-08-21 minus:（表示运算）减去
-        System.err.println(localDate + "前一年>" + localDate.minusYears(1));
+        System.out.println(localDate + "前一年>" + localDate.minusYears(1));
 
         //当前日期后一年,2019-08-21 plus:（表示运算）加
-        System.err.println(localDate + "后一年>" + localDate.plusYears(1));
+        System.out.println(localDate + "后一年>" + localDate.plusYears(1));
 
         //当前日期前一周,2018-08-14 minus:（表示运算）减去
-        System.err.println(localDate + "前一周>" + localDate.minusWeeks(1));
+        System.out.println(localDate + "前一周>" + localDate.minusWeeks(1));
 
         //当前日期后一周,2018-08-28 plus:（表示运算）加
-        System.err.println(localDate + "后一周>" + localDate.plusWeeks(1));
+        System.out.println(localDate + "后一周>" + localDate.plusWeeks(1));
 
 
         /**
@@ -76,34 +78,34 @@ public class Java8Date {
         System.out.println(">>>>>>>>>LocalTime<<<<<<<<");
         //获取当前时间 11:36:13.693
         LocalTime localTime = LocalTime.now();
-        System.err.println("当前时间>" + localTime);
+        System.out.println("当前时间>" + localTime);
 
         //获取当前时 11
-        System.err.println(localTime + "当前时>" + localTime.getHour());
+        System.out.println(localTime + "当前时>" + localTime.getHour());
 
         //获取当前分 38
-        System.err.println(localTime + "当前分>" + localTime.getMinute());
+        System.out.println(localTime + "当前分>" + localTime.getMinute());
 
         //获取当前秒 26
-        System.err.println(localTime + "当前秒>" + localTime.getSecond());
+        System.out.println(localTime + "当前秒>" + localTime.getSecond());
 
         //当前时间前一时,11:36:12.693 minus:（表示运算）减去
-        System.err.println(localTime + "前一时>" + localTime.minusHours(1));
+        System.out.println(localTime + "前一时>" + localTime.minusHours(1));
 
         //当前时间后一时,11:36:12.693 minus:（表示运算）减去
-        System.err.println(localTime + "后一时>" + localTime.plusHours(1));
+        System.out.println(localTime + "后一时>" + localTime.plusHours(1));
 
         //当前时间前一分,11:39:05.970 minus:（表示运算）减去
-        System.err.println(localTime + "前一分>" + localTime.minusMinutes(1));
+        System.out.println(localTime + "前一分>" + localTime.minusMinutes(1));
 
         //当前时间后一分,11:36:12.693 minus:（表示运算）减去
-        System.err.println(localTime + "后一分>" + localTime.plusMinutes(1));
+        System.out.println(localTime + "后一分>" + localTime.plusMinutes(1));
 
         //当前时间前一秒,11:36:12.693 minus:（表示运算）减去
-        System.err.println(localTime + "前一秒>" + localTime.minusSeconds(1));
+        System.out.println(localTime + "前一秒>" + localTime.minusSeconds(1));
 
         //当前时间后一秒,11:36:12.693 minus:（表示运算）减去
-        System.err.println(localTime + "后一秒>" + localTime.plusSeconds(1));
+        System.out.println(localTime + "后一秒>" + localTime.plusSeconds(1));
 
         /**
          * localDateTime
@@ -123,7 +125,7 @@ public class Java8Date {
         System.out.println(">>>>>>>>>localDateTime<<<<<<<<");
 
         LocalDateTime localDateTime = LocalDateTime.now();
-        System.err.println("当前完整日期>" + localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        System.out.println("当前完整日期>" + localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
 
         /**
@@ -139,9 +141,9 @@ public class Java8Date {
         String formatDateStr = localDateTime.format(formatDate);
         String formatTimeStr = localDateTime.format(formatTime);
 
-        System.err.println("完整日期格式化之后" + formatDataTimeStr);
-        System.err.println("日期格式化之后" + formatDateStr);
-        System.err.println("时间格式化之后" + formatTimeStr);
+        System.out.println("完整日期格式化之后" + formatDataTimeStr);
+        System.out.println("日期格式化之后" + formatDateStr);
+        System.out.println("时间格式化之后" + formatTimeStr);
 
         /**
          * 时间比较大小
@@ -151,12 +153,14 @@ public class Java8Date {
         LocalDateTime time1 = LocalDateTime.parse("2018-05-12 08:30:30", formatDataTime);
         LocalDateTime time2 = LocalDateTime.parse("2018-04-20 16:30:30", formatDataTime);
 
-        System.err.println("time1=" + time1);
-        System.err.println("time2=" + time2);
+        System.out.println("time1=" + time1);
+        System.out.println("time2=" + time2);
 
-        System.err.println("time1==time2:" + time1.isEqual(time2));
-        System.err.println("time1>time2:" + time1.isAfter(time2));
-        System.err.println("time1<time2:" + time1.isBefore(time2));
+        System.out.println("time1==time2:" + time1.isEqual(time2));
+        System.out.println("time1>time2:" + time1.isAfter(time2));
+        System.out.println("time1<time2:" + time1.isBefore(time2));
+        System.out.println("-------------------------------------");
+        System.out.println(Date8Util.DATE_FORMAT);
     }
 
 }
