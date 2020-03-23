@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * 基于java8封装的时间处理工具类:This class is immutable and thread-safe.
+ * 基于java8封装的时间处理工具类:This class is immutable and thread-safe.而Date非线程安全
  * <p>
  * Created by Chr.yl on 2020/3/22.
  *
@@ -237,7 +237,7 @@ public class Date8Util {
      * 获取当前年的 前几年 的日期
      * <p>
      *
-     * @param years      前几年 正整数
+     * @param years      前几年 正整数Long
      * @param formatEnum 格式
      * @return 当前年的 前几年 的 对应 格式 日期
      */
@@ -463,10 +463,7 @@ public class Date8Util {
     /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 时间间隔相关 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
     /**
-     * 获取 endDate-startDate 时间间隔天数
-     * <br>创建人： leigq
-     * <br>创建时间： 2018-11-07 09:55
-     * <br>
+     * 获取 endDate-startDate 时间间隔天数LocalDate
      *
      * @param startDate 开始时间
      * @param endDate   结束时间
@@ -477,10 +474,7 @@ public class Date8Util {
     }
 
     /**
-     * 获取 endDate-startDate 时间间隔天数
-     * <br>创建人： leigq
-     * <br>创建时间： 2018-11-07 09:55
-     * <br>
+     * 获取 endDate-startDate 时间间隔天数String
      *
      * @param startDate 开始时间
      * @param endDate   结束时间
@@ -492,10 +486,7 @@ public class Date8Util {
     }
 
     /**
-     * 获取 endDate-startDate 时间间隔天数
-     * <br>创建人： leigq
-     * <br>创建时间： 2018-11-07 09:55
-     * <br>
+     * 获取 endDate-startDate 时间间隔天数LocalDateTime
      *
      * @param startDate 开始时间
      * @param endDate   结束时间
@@ -507,11 +498,10 @@ public class Date8Util {
 
     /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 时间间隔相关 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-    /*↓↓↓只允许此类调用↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+    /*↓↓↓下面为私有方法↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
     /**
      * 获取 当前年 的前几年/后几年的日期
-     * <p>
      *
      * @param yearsToAddOrSubtract 后几年传正整数，前几年传负数
      * @param formatEnum           格式
@@ -594,11 +584,19 @@ public class Date8Util {
         return localDateTime().toLocalDate();
     }
 
+    private static LocalDate lDate() {
+        return LocalDate.now();
+    }
+
     /**
      * 获取 LocalTime
      */
     private static LocalTime localTime() {
         return localDateTime().toLocalTime();
+    }
+
+    private static LocalTime lTime() {
+        return LocalTime.now();
     }
 
     /**
@@ -607,6 +605,5 @@ public class Date8Util {
     private static LocalDateTime localDateTime() {
         return LocalDateTime.now();
     }
-
 
 }

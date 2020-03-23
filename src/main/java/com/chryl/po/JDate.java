@@ -22,5 +22,4 @@ public class JDate implements Serializable {
 
     private LocalDateTime jDatetime;
 
-
 }
