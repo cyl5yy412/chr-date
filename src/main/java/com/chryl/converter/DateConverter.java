@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 接收前端传递的string date类型
+ * 后台Date接收前端传递的string date类型
  */
 @Component
 public class DateConverter implements Converter<String, Date> {
