@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  *
  * @author Chr.yl
  */
-@ControllerAdvice//自定义异常处理
+//@ControllerAdvice//自定义异常处理
 public class JDateExController {
 
 

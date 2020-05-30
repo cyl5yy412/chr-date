@@ -8,7 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 后台Date接收前端传递的string date类型
+ * 后台Date接收前端传递的string date类型(直接Date接收String date),
+ * 不影响json接收Date类型的数据,但需要在字段上加上两个注解(入参和出参时间注解),或者在.properties文件里配置
  */
 @Component
 public class DateConverter implements Converter<String, Date> {
