@@ -29,7 +29,7 @@ public class JDateController {
     }
 
     /**
-     * 测试@RequestBody 接收date,需要加上Json注解
+     * 测试@RequestBody 接收date,javabean需要加上Json注解或者.properties加上配置
      * {
      * "date": "2020-05-31 12:34:56",
      * "myDate":"2020-05-31 12:34:56",
