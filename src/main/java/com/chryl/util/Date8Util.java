@@ -118,6 +118,8 @@ public class Date8Util {
      */
     public static final String DATETIME_FORMAT = YEAR_FORMAT + MONTH_FORMAT + DAY_FORMAT + HOUR_FORMAT + MINUTE_FORMAT + SECOND_FORMAT;
 
+    //yyyyMMdd
+    public static final String DATE_PARSE_FORMAT = YEAR_FORMAT + MONTH_FORMAT + DAY_FORMAT;
     /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 时间格式 字符串 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
 
