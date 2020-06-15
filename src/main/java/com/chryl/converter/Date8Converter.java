@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * java 8 的日期类型的DateConverter , 包含国际标准时间的转化
- *
+ * <p>
  * 后台Date接收前端传递的string date类型(直接Date接收String date),
  * 不影响json接收Date类型的数据,但需要在字段上加上两个注解(入参和出参时间注解),或者在.properties文件里配置
  */
@@ -64,6 +64,18 @@ public class Date8Converter implements Converter<String, LocalDate> {//这里使
         }
         throw new RuntimeException(String.format("parser %s to Date fail", source));
     }
+
+
+//    public static void main(String[] args) {
+//        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+//        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd");
+//        try {
+//            Date date = sdf1.parse("2018-01-22T09:12:43.083Z");//拿到Date对象
+//            String str = sdf2.format(date);//输出格式：2017-01-22 09:28:33
+//            System.out.println(str);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 
 }
